@@ -12,3 +12,13 @@ files:
     description: "Books"
     fields:
       - {label: "Image", name: "image", widget: "image"}
+collections:
+  - name: "about"
+    label: "About"
+    folder: "src/pages/about"
+    create: false
+    slug: "{{slug}}"
+    fields:
+      - {label: "Path", name: "path", widget: "hidden", default: "/about"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
