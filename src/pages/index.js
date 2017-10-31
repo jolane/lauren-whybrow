@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components';
+import Helmet from 'react-helmet'
 
 import { Grid, Col, media } from '../util/universal'
 import Label from '../components/Label'
