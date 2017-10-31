@@ -5,13 +5,7 @@ backend:
 media_folder: "/static/images"
 public_folder: "images"
 
-files:
-  - name: "editing"
-    label: "Editing"
-    file: "/src/_data/editing.yml"
-    description: "Books"
-    fields:
-      - {label: "Image", name: "image", widget: "image"}
+
 collections:
   - name: "about"
     label: "About"
@@ -22,3 +16,16 @@ collections:
       - {label: "Path", name: "path", widget: "hidden", default: "/about"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "settings"
+    label: "Settings"
+    delete: false # Prevent users from deleting documents in this collection
+    editor:
+      preview: false
+    files:
+      - name: "editing"
+        label: "Editing"
+        file: "/src/_data/editing.yml"
+        description: "Books"
+        fields:
+          - {label: "Image", name: "image", widget: "image"}
