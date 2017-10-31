@@ -18,4 +18,8 @@ collections:
         file: "/src/data/editing.yml"
         description: "Books"
         fields:
-          - {label: "Image", name: "image", widget: "image"}
+          - name: "editing1"
+            label: "Editing1"
+            widget: "object"
+            fields:
+              - {label: "Image", name: "image", widget: "image"}
