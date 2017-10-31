@@ -34,7 +34,17 @@ class IndexPage extends React.Component {
       background: 'http://via.placeholder.com/350x150'
     }
   }
-
+  componentDidMount() {
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on('init', user => {
+        if (!user) {
+          window.netlifyIdentity.on('login', () => {
+            document.location.href = '/admin/';
+          });
+        }
+      });
+    }
+  }
   updateBackground(bg) {
     this.setState({ background: bg});
   }
