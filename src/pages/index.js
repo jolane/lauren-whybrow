@@ -51,21 +51,26 @@ class IndexPage extends React.Component {
 
   render() {
     return (
-      <Grid>
-        <Col>
-          <Label>Intro.</Label>
-        </Col>
-        <BgCol bg={this.state.background}>
-          <Copy>
-            <strong onMouseEnter={e => this.updateBackground('http://via.placeholder.com/350x650/green/000')}><i>Lauren Whybrow</i></strong> is a book editor based
-            in Melbourne, Australia. Her interests
-            include <strong onMouseEnter={e => this.updateBackground('http://via.placeholder.com/350x150/e673ed/000')}><i>potatoes, obnoxious jumpers</i></strong>
-            and <strong onMouseEnter={e => this.updateBackground('http://via.placeholder.com/100x350/red/000')}><i>luxurious weekend getaways.</i></strong> She
-            also writes for an array of <strong><i>publications</i></strong>
-            and <strong onMouseEnter={e => this.updateBackground('http://via.placeholder.com/550x250/red/000')}><i>reviews books with emojis.</i></strong>
-          </Copy>
-        </BgCol>
-      </Grid>
+      <div>
+        <Helmet>
+          <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
+        </Helmet>
+        <Grid>
+          <Col>
+            <Label>Intro.</Label>
+          </Col>
+          <BgCol bg={this.state.background}>
+            <Copy>
+              <strong onMouseEnter={e => this.updateBackground('http://via.placeholder.com/350x650/green/000')}><i>Lauren Whybrow</i></strong> is a book editor based
+              in Melbourne, Australia. Her interests
+              include <strong onMouseEnter={e => this.updateBackground('http://via.placeholder.com/350x150/e673ed/000')}><i>potatoes, obnoxious jumpers</i></strong>
+              and <strong onMouseEnter={e => this.updateBackground('http://via.placeholder.com/100x350/red/000')}><i>luxurious weekend getaways.</i></strong> She
+              also writes for an array of <strong><i>publications</i></strong>
+              and <strong onMouseEnter={e => this.updateBackground('http://via.placeholder.com/550x250/red/000')}><i>reviews books with emojis.</i></strong>
+            </Copy>
+          </BgCol>
+        </Grid>
+      </div>
     )
   }
 }
