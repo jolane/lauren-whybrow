@@ -13,13 +13,13 @@ collections:
     editor:
       preview: false
     files:
-      - name: "editing"
-        label: "Editing"
-        file: "/src/data/editing.yml"
+      - name: "work"
+        label: "Work"
+        file: "/src/data/work.yml"
         description: "Books"
         fields:
-          - name: "editing1"
-            label: "Editing1"
+          - name: "editing"
+            label: "Editing"
             widget: "list"
             fields:
               - {label: "Image", name: "image", widget: "image"}
