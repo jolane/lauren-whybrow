@@ -1,1 +1,22 @@
-{"editing":{"image":"/images/2017-10-11 14.25.16.jpg"}}
+{
+    "editing": [
+        { "image": "/images/2017-10-11 14.25.16.jpg" },
+        { "image": "/images/book-01.jpg" },
+        { "image": "/images/book-02.jpg" },
+        { "image": "/images/book-03.jpg" },
+        { "image": "/images/book-04.jpg" },
+        { "image": "/images/book-05.jpg" },
+        { "image": "/images/book-06.jpg" },
+        { "image": "/images/book-07.jpg" },
+        { "image": "/images/book-08.jpg" },
+        { "image": "/images/book-09.jpg" },
+        { "image": "/images/book-10.jpg" },
+        { "image": "/images/Friday+Saturday+Sunday.jpg" },
+        { "image": "/images/Kyoto+Precincts.jpg" },
+        { "image": "/images/Pets+on+Holiday.jpg" },
+        { "image": "/images/Retro+Jumpers.jpg" },
+        { "image": "/images/Sydney+Precincts.jpg" },
+        { "image": "/images/The+Potato+Cookbook.jpg" },
+        { "image": "/images/Tokyo+Precincts.jpg" }
+    ]
+}

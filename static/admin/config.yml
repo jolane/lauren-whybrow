@@ -20,6 +20,6 @@ collections:
         fields:
           - name: "editing"
             label: "Editing"
-            widget: "object"
+            widget: "list"
             fields:
               - {label: "Image", name: "image", widget: "image"}
