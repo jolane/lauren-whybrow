@@ -8,7 +8,8 @@ import LargeCopy from '../components/LargeCopy'
 import WorkItem from '../components/WorkItem'
 
 const EditingPage = ({ data }) => {
-	const nodes = data.allEditingYaml.edges
+	console.log(data.allWorkYaml);
+	const nodes = data.allEditingJson.edges
 	return (
 		<div>
 			<Grid>
@@ -25,6 +26,7 @@ const EditingPage = ({ data }) => {
 			</Grid>
 			<Grid full>
 				{nodes.map((node, index) => {
+					console.log(node);
 					let { image } = node.node
 					let number = (index + 1 < 10) ? `0${index + 1}.` : `${index + 1}.`
 					return (
@@ -43,13 +45,13 @@ const EditingPage = ({ data }) => {
 
 export const query = graphql`
 	query EditingQuery {
-		allEditingYaml {
-	  		edges {
-	  		  	node {
-					image
-	    		}
-	  		}
-		}
+		allEditingJson {
+    		edges {
+      			node {
+        			image
+      			}
+    		}
+  		}
 	} 
 `
 

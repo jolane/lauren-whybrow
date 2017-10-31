@@ -7,15 +7,15 @@ public_folder: "images"
 
 
 collections:
-  - name: "settings"
-    label: "Settings"
+  - name: "work"
+    label: "Work"
     delete: false # Prevent users from deleting documents in this collection
     editor:
       preview: false
     files:
-      - name: "work"
-        label: "Work"
-        file: "/src/data/work.yml"
+      - name: "editing"
+        label: "Editing"
+        file: "/src/data/editing.json"
         description: "Books"
         fields:
           - name: "editing"

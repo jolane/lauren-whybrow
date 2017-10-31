@@ -19,6 +19,6 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
-    `gatsby-transformer-yaml`
+    `gatsby-transformer-json`
   ],
 }

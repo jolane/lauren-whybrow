@@ -9,7 +9,7 @@ import WorkItem from '../components/WorkItem'
 
 
 const WritingPage = ({ data }) => {
-	const nodes = data.allWritingYaml.edges
+	const nodes = data.allWritingJson.edges
 	return(
 		<div>
 			<Grid>
@@ -26,14 +26,14 @@ const WritingPage = ({ data }) => {
 			</Grid>
 			<Grid full>
 				{nodes.map((node, index) => {
-					let { title, image, text, type } = node.node
+					let { title, image, type } = node.node
 					let number = (index + 1 < 10) ? `0${index + 1}.` : `${index + 1}.`
 					return (
 						<WorkItem
 							key={index}
 							title={title}
 							img={image}
-							text={text}
+							text="lorem"
 							type={number}
 						/>
 					)
@@ -47,15 +47,14 @@ const WritingPage = ({ data }) => {
 
 export const query = graphql`
 	query WritingQuery {
-		allWritingYaml {
-	  		edges {
-	  		  	node {
-					text
-					image
+		allWritingJson {
+			edges {
+				node {
 					title
-					type
-	    		}
-	  		}
+					url
+					image
+				}
+			}	
 		}
 	} 
 	`
