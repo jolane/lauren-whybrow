@@ -36,15 +36,17 @@ class IndexPage extends React.Component {
     }
   }
   componentDidMount() {
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on('init', user => {
-        if (!user) {
-          window.netlifyIdentity.on('login', () => {
-            document.location.href = '/admin/';
-          });
-        }
-      });
-    }
+    window.setTimeout(function() {
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on('init', user => {
+          if (!user) {
+            window.netlifyIdentity.on('login', () => {
+              document.location.href = '/admin/';
+            });
+          }
+        });
+      }
+    }, 1000);
   }
   updateBackground(bg) {
     this.setState({ background: bg});
