@@ -22,13 +22,13 @@ const HeaderWrapper = styled.header`
   z-index: 1001;
   top: 0;
   left: 0;
-`;
+`
 
 class Header extends React.Component {
   constructor() {
-    super();
+    super()
     this.state = {
-      nav_open: false 
+      nav_open: false,
     }
   }
 
@@ -40,8 +40,14 @@ class Header extends React.Component {
     return (
       <HeaderWrapper>
         <Logo />
-        <Nav nav_open={this.state.nav_open} toggleNav={this.toggleNav.bind(this)} />
-        <Hamburger toggleNav={this.toggleNav.bind(this)} nav_open={this.state.nav_open} />
+        <Nav
+          nav_open={this.state.nav_open}
+          toggleNav={this.toggleNav.bind(this)}
+        />
+        <Hamburger
+          toggleNav={this.toggleNav.bind(this)}
+          nav_open={this.state.nav_open}
+        />
       </HeaderWrapper>
     )
   }
@@ -57,9 +63,7 @@ const TemplateWrapper = ({ children }) => (
       ]}
     />
     <Header />
-    <div>
-      {children()}
-    </div>
+    <div>{children()}</div>
   </div>
 )
 
